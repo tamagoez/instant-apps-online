@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { NextPage } from 'next'
-import { FaLock, FaGithub } from 'react-icons/fa'
+import { FaLock, FaDiscord } from 'react-icons/fa'
 import { NextAppPageProps } from '~/types/app'
 import Layout from '~/components/Layout'
 import Spinner from '~/components/Spinner'
@@ -41,7 +41,7 @@ const IndexPage: NextPage<NextAppPageProps> = () => {
             <FaLock className="text-gray-600 text-5xl shadow-sm" />
           </div>
           <h3 className="text-3xl text-gray-600">
-            Supa<strong>Auth</strong>&nbsp;
+            VividGround <strong>Auth</strong>&nbsp;
           </h3>
           <small>
             Please provide your <strong>email</strong> and{' '}
@@ -136,6 +136,6 @@ export default IndexPage
 
 IndexPage.defaultProps = {
   meta: {
-    title: 'SupaAuth - Sign Up',
+    title: 'Sign Up - VividGround',
   },
 }
