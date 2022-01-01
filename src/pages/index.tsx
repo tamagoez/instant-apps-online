@@ -55,12 +55,12 @@ const IndexPage: NextPage<NextAppPageProps> = () => {
             <button
               onClick={(evt) => {
                 evt.preventDefault()
-                signInWithProvider('github')
+                signInWithProvider('discord')
               }}
               className="flex-1 bg-gray-200 text-green-700 py-3 rounded w-full text-center shadow"
             >
-              <FaGithub className="inline-block text-2xl" />{' '}
-              {isSignIn ? 'Log In' : 'Sign Up'} with <strong>Github</strong>
+              <FaDiscord className="inline-block text-2xl" />{' '}
+              {isSignIn ? 'Log In' : 'Sign Up'} with <strong>Discord</strong>
             </button>
             <hr className="my-4" />
             <div className="mb-4">
