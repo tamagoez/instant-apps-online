@@ -41,7 +41,7 @@ const IndexPage: NextPage<NextAppPageProps> = () => {
             <FaLock className="text-gray-600 text-5xl shadow-sm" />
           </div>
           <h3 className="text-3xl text-gray-600">
-            Useful Web Hub <strong>Auth</strong>&nbsp;
+            Online<strong>Hub</strong>&nbsp;
           </h3>
           <small>
             Please provide your <strong>email</strong> and{' '}
@@ -136,6 +136,6 @@ export default IndexPage
 
 IndexPage.defaultProps = {
   meta: {
-    title: 'Sign Up - VividGround',
+    title: 'Sign Up - OnlineHub',
   },
 }
