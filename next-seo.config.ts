@@ -1,5 +1,5 @@
-const title = 'Next.js Starter Kit'
-const description = 'Next.js with brilliant bells and useful whistles'
+const title = 'Online Hub'
+const description = 'Web application for survey, vote, form and so on.'
 
 const SEO = {
   title,
@@ -21,8 +21,8 @@ const SEO = {
     ],
   },
   twitter: {
-    handle: '@your-twitter-handle',
-    site: '@your-twitter-handle',
+    handle: '@_tamagoez_',
+    site: '@_tamagoez_',
     cardType: 'summary_large_image',
   },
 }
