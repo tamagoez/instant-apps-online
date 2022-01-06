@@ -8,6 +8,7 @@ import { useFormFields } from '~/lib/utils'
 import { useAuth } from '~/lib/auth'
 import Link from "next/link";
 import { useUser } from "@auth0/nextjs-auth0";
+import styles from "../styles/Home.module.css";
 
 type SignUpFieldProps = {
   email: string
