@@ -10,6 +10,7 @@ import { DefaultSeo } from 'next-seo'
 import SEO from '../../next-seo.config'
 import { MessageProvider } from '~/lib/message'
 import { AuthProvider } from '~/lib/auth'
+import { UserProvider } from "@auth0/nextjs-auth0";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const pageMeta = (Component as any)?.defaultProps?.meta || {}
@@ -22,9 +23,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <DefaultSeo {...pageSEO} />
       <MessageProvider>
-        <AuthProvider>
+        // 本当はAuthProvider
+        <UserProvider>
           <Component {...pageProps} />
-        </AuthProvider>
+        </UserProvider>
       </MessageProvider>
     </React.Fragment>
   )
