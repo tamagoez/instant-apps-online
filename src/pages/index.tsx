@@ -1,3 +1,10 @@
+// other imports
+import { withPageAuthRequired } from "@auth0/nextjs-auth0";
+
+// rest of component
+export const getServerSideProps = withPageAuthRequired();
+
+// other export
 import { useState } from 'react'
 import { NextPage } from 'next'
 import { FaLock, FaDiscord } from 'react-icons/fa'
@@ -197,6 +204,7 @@ const IndexPage: NextPage<NextAppPageProps> = () => {
 }
 
 // Core
+export const getServerSideProps = withPageAuthRequired();
 export default DefaultIndex
 
 IndexPage.defaultProps = {
