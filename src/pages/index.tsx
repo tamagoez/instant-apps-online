@@ -4,8 +4,8 @@ import { FaLock, FaDiscord } from 'react-icons/fa'
 import { NextAppPageProps } from '~/types/app'
 import Layout from '~/components/Layout'
 import Spinner from '~/components/Spinner'
-// import { useFormFields } from '~/lib/utils'
-// import { useAuth } from '~/lib/auth'
+import { useFormFields } from '~/lib/utils'
+import { useAuth } from '~/lib/auth'
 import Link from "next/link";
 import { useUser } from "@auth0/nextjs-auth0";
 
