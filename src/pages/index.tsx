@@ -20,6 +20,42 @@ const FORM_VALUES: SignUpFieldProps = {
   password: '',
 }
 
+// beta version
+const DefaultIndex = () => {
+  const { user } = useUser();
+
+  return (
+    <Layout useBackdrop={true} usePadding={false}>
+    <div className="h-screen flex flex-col justify-center items-center relative">
+      {/* App logo and tagline*/}
+      <div className="w-full text-center mb-4 flex  flex-col place-items-center">
+        <div>
+          <FaLock className="text-gray-600 text-5xl shadow-sm" />
+        </div>
+        <h3 className="text-3xl text-gray-600">
+          Online<strong>Hub</strong>&nbsp;
+        </h3>
+        <small>
+        {user ? (
+        <p>
+          Welcome {user.name}!{" "}
+          <Link href="/api/auth/logout">
+            <a>Logout</a>
+          </Link>
+        </p>
+      ) : (
+        <Link href="/api/auth/login">
+          <a>Login</a>
+        </Link>
+      )}
+        </small>
+      </div>
+      <div className="h-12 w-12 relative">{loading && <Spinner />}</div>
+    </div>
+    </Layout>
+  );
+};
+
 // Auth0 version
 const Index = () => {
   const { user } = useUser();
@@ -160,7 +196,7 @@ const IndexPage: NextPage<NextAppPageProps> = () => {
 }
 
 // Core
-export default Index
+export default DefaultIndex
 
 IndexPage.defaultProps = {
   meta: {
