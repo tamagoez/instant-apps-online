@@ -50,7 +50,6 @@ const DefaultIndex = () => {
       )}
         </small>
       </div>
-      <div className="h-12 w-12 relative">{loading && <Spinner />}</div>
     </div>
     </Layout>
   );
