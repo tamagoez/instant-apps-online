@@ -27,9 +27,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         何卒宜しくお願い致します。<br />
         現在のバージョン: { process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA }<br />
         アップデートの説明: { process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_MESSAGE }
-        <UserProvider>
+        <AuthProvider>
           <Component {...pageProps} />
-        </UserProvider>
+        </AuthProvider>
       </MessageProvider>
     </React.Fragment>
   )
