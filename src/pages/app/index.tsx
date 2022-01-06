@@ -1,3 +1,3 @@
 // import { getSupabase } from '~/lib/supabase/gs'
 
-export {}
+export default {}
