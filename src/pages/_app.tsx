@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <DefaultSeo {...pageSEO} />
       <MessageProvider>
-        現在開発中の為、不具合等がある可能性があります。
+        現在開発中の為、不具合等がある可能性があります。<br />
         何卒宜しくお願い致します。
         <UserProvider>
           <Component {...pageProps} />
