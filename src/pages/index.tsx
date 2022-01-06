@@ -204,7 +204,6 @@ const IndexPage: NextPage<NextAppPageProps> = () => {
 }
 
 // Core
-export const getServerSideProps = withPageAuthRequired();
 export default DefaultIndex
 
 IndexPage.defaultProps = {
