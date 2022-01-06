@@ -4,8 +4,10 @@ import { FaLock, FaDiscord } from 'react-icons/fa'
 import { NextAppPageProps } from '~/types/app'
 import Layout from '~/components/Layout'
 import Spinner from '~/components/Spinner'
-import { useFormFields } from '~/lib/utils'
-import { useAuth } from '~/lib/auth'
+// import { useFormFields } from '~/lib/utils'
+// import { useAuth } from '~/lib/auth'
+import Link from "next/link";
+import { useUser } from "@auth0/nextjs-auth0";
 
 type SignUpFieldProps = {
   email: string
@@ -17,6 +19,30 @@ const FORM_VALUES: SignUpFieldProps = {
   password: '',
 }
 
+// Auth0 version
+const Index = () => {
+  const { user } = useUser();
+
+  return (
+    <div className={styles.container}>
+      {user ? (
+        <p>
+          Welcome {user.name}!{" "}
+          <Link href="/api/auth/logout">
+            <a>Logout</a>
+          </Link>
+        </p>
+      ) : (
+        <Link href="/api/auth/login">
+          <a>Login</a>
+        </Link>
+      )}
+    </div>
+  );
+};
+
+
+// BackUp of supabase version
 const IndexPage: NextPage<NextAppPageProps> = () => {
   const [isSignIn, setIsSignIn] = useState(true)
   const { loading, signIn, signUp, signInWithProvider } = useAuth()
@@ -132,7 +158,8 @@ const IndexPage: NextPage<NextAppPageProps> = () => {
   )
 }
 
-export default IndexPage
+// Core
+export default Index
 
 IndexPage.defaultProps = {
   meta: {
