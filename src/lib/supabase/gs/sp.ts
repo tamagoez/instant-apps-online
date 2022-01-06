@@ -9,4 +9,4 @@ const getSupabase = () => {
     return supabase_;
   };
 
-export default { getSupabase };
+export default getSupabase ;
