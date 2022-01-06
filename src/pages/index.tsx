@@ -204,7 +204,7 @@ const IndexPage: NextPage<NextAppPageProps> = () => {
 }
 
 // Core
-export default DefaultIndex
+export default IndexPage
 
 IndexPage.defaultProps = {
   meta: {
