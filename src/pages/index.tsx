@@ -44,9 +44,14 @@ const DefaultIndex = () => {
           </Link>
         </p>
       ) : (
-        <Link href="/api/auth/login">
-          <button className="btn btn-primary"><a>Login</a></button>
-        </Link>
+        <p>
+          <Link href="/api/auth/login">
+            <button className="btn btn-primary"><a>Login</a></button>
+          </Link>
+          <Link href="/api/auth/signup">
+            <button className="btn btn-primary"><a>SignUp</a></button>
+          </Link>
+        </p>
       )}
         </small>
       </div>
