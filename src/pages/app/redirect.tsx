@@ -3,7 +3,7 @@
 import Router from 'next/router'
 import { GetServerSideProps } from 'next'
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export default const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
       statusCode: 302, // ステータスコード指定
