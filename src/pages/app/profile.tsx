@@ -26,7 +26,7 @@ const ProfilePage = (props) => {
     <Layout useBackdrop={false}>
       <div className="h-screen flex flex-col justify-center items-center relative">
         <h2 className="text-3xl my-4">
-          Howdie, {user && user.email ? user.email : 'Explorer'}!<br />現在作成中です...<br />乞うご期待!
+          Hi, {user && user.email ? user.email : 'Explorer'}!<br />Now in the process...<br />See you soon!
         </h2>
         {!user && (
           <small>
